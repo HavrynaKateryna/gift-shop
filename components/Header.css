@@ -1,0 +1,421 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background: rgba(252, 250, 246, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+.header-container {
+  width: 100%;
+  max-width: none;
+  height: 74px;
+  margin: 0;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: var(--olive);
+  color: var(--white);
+
+  font-size: 18px;
+
+  box-shadow: 0 2px 8px rgba(74, 64, 56, 0.08);
+
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(-7deg);
+}
+
+.logo-text {
+  display: block;
+
+  color: var(--brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: -0.02em;
+}
+
+.logo-tagline {
+  display: block;
+  margin-top: 4px;
+
+  color: var(--brown-light);
+
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  position: relative;
+
+  padding: 8px 0;
+
+  color: var(--brown);
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--olive);
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1.5px;
+
+  background: var(--olive);
+
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   RIGHT ACTIONS
+========================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-button {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--brown);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.header-button:hover {
+  background: var(--sage-light);
+  color: var(--olive-dark);
+}
+
+.header-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-button {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  min-width: 16px;
+  height: 16px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: var(--olive);
+  color: var(--white);
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  margin-left: 4px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--brown);
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mobile-menu-button:hover {
+  background: var(--sage-light);
+}
+
+.menu-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-line {
+  width: 20px;
+  height: 1.5px;
+  background: currentColor;
+}
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+.mobile-nav {
+  display: none;
+
+  border-top: 1px solid var(--border);
+  background: var(--cream-light);
+}
+
+.mobile-nav-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 16px 40px 20px;
+}
+
+.mobile-nav-link {
+  display: block;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--brown);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: 0;
+}
+
+.mobile-nav-link:hover {
+  color: var(--olive);
+}
+
+/* =========================
+   MOBILE BUILDER BUTTON
+========================= */
+
+.mobile-builder-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 16px;
+  padding: 14px 20px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--olive);
+  color: var(--white);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.mobile-builder-button:hover {
+  background: var(--olive-dark);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1023px) {
+  .header-container {
+    padding: 0 24px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 639px) {
+  .header-container {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .logo {
+    gap: 9px;
+  }
+
+  .logo-tagline {
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-actions {
+    gap: 0;
+  }
+
+  .header-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .account-button {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    width: 36px;
+    height: 36px;
+    margin-left: 2px;
+  }
+
+  .mobile-nav-inner {
+    padding: 16px 20px 20px;
+  }
+}
+
+/* =========================
+   VERY SMALL SCREENS
+========================= */
+
+@media (max-width: 380px) {
+  .header-container {
+    padding: 0 12px;
+  }
+
+  .logo {
+    gap: 7px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-actions {
+    gap: 0;
+  }
+}

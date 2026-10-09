@@ -1,0 +1,673 @@
+/* =========================
+   GIFT BOXES SECTION
+========================= */
+
+.gift-boxes-section {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--cream-light);
+  padding: 72px 40px 90px;
+}
+
+.gift-boxes-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.gift-boxes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 38px;
+}
+
+.gift-boxes-eyebrow {
+  margin: 0 0 10px;
+  color: var(--olive);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.gift-boxes-header h1 {
+  margin: 0;
+  color: var(--brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.gift-boxes-intro {
+  max-width: 620px;
+  margin: 16px 0 0;
+  color: var(--brown-light);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.gift-boxes-categories {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 42px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.gift-boxes-categories button {
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--brown);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gift-boxes-categories button:hover {
+  border-color: var(--olive);
+  transform: translateY(-1px);
+}
+
+.gift-boxes-categories button.active {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: var(--white);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.gift-boxes-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.gift-box-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 8px 30px rgba(81, 69, 59, 0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.gift-box-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(81, 69, 59, 0.1);
+}
+
+/* =========================
+   IMAGE / VISUAL
+========================= */
+
+.gift-box-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.85),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      var(--kraft-light) 0%,
+      var(--cream) 52%,
+      #e9dfd0 100%
+    );
+}
+
+.gift-box-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.gift-box-decoration-one {
+  width: 150px;
+  height: 150px;
+  top: -55px;
+  right: -35px;
+  background: var(--terracotta);
+}
+
+.gift-box-decoration-two {
+  width: 100px;
+  height: 100px;
+  bottom: -40px;
+  left: -30px;
+  background: var(--olive);
+}
+
+/* =========================
+   CSS GIFT BOX
+========================= */
+
+.gift-box-visual {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  width: 150px;
+  height: 125px;
+  transform: translate(-50%, -50%);
+}
+
+.gift-box-body {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  height: 88px;
+  border-radius: 5px 5px 10px 10px;
+  background: var(--olive);
+  box-shadow:
+    inset -10px 0 rgba(0, 0, 0, 0.07),
+    0 12px 20px rgba(81, 69, 59, 0.16);
+}
+
+.gift-box-lid {
+  position: absolute;
+  z-index: 3;
+  left: 3px;
+  top: 25px;
+  width: 144px;
+  height: 30px;
+  border-radius: 6px;
+  background: var(--olive-dark);
+  box-shadow: 0 5px 8px rgba(81, 69, 59, 0.15);
+}
+
+.gift-box-ribbon {
+  position: absolute;
+  z-index: 4;
+  top: 25px;
+  left: 50%;
+  width: 20px;
+  height: 100px;
+  transform: translateX(-50%);
+  background: var(--terracotta);
+}
+
+.gift-box-visual > span {
+  position: absolute;
+  z-index: 6;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34px;
+  filter: drop-shadow(
+    0 4px 5px rgba(0, 0, 0, 0.1)
+  );
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.gift-box-badge {
+  position: absolute;
+  z-index: 10;
+  right: 16px;
+  top: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 150px;
+  padding: 8px 11px;
+  border: 1px solid rgba(232, 222, 208, 0.8);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--olive-dark);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 5px 16px rgba(81, 69, 59, 0.08);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.gift-box-content {
+  padding: 26px 26px 28px;
+}
+
+.gift-box-tag {
+  margin: 0 0 8px;
+  color: var(--olive);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.gift-box-content h2 {
+  margin: 0;
+  color: var(--brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.gift-box-description {
+  min-height: 52px;
+  margin: 12px 0 20px;
+  color: var(--brown-light);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIZES
+========================= */
+
+.gift-box-sizes {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.gift-box-sizes button {
+  min-width: 0;
+  min-height: 58px;
+  padding: 8px 5px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--cream-light);
+  color: var(--brown);
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gift-box-sizes button:hover {
+  border-color: var(--olive);
+  transform: translateY(-1px);
+}
+
+.gift-box-sizes button.active {
+  border-color: var(--olive);
+  background: var(--sage-light);
+}
+
+.gift-box-sizes button span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--brown-light);
+  font-size: 11px;
+}
+
+.gift-box-sizes button strong {
+  display: block;
+  color: var(--brown);
+  font-size: 14px;
+}
+
+/* =========================
+   SEE INSIDE
+========================= */
+
+.gift-box-inside-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  background: transparent;
+  color: var(--olive-dark);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.gift-box-inside-button:hover {
+  color: var(--terracotta);
+}
+
+.gift-box-inside-button span {
+  font-size: 16px;
+}
+
+/* =========================
+   INSIDE CONTENT
+========================= */
+
+.gift-box-inside {
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid rgba(232, 222, 208, 0.7);
+  border-radius: 12px;
+  background: var(--cream);
+  animation: giftBoxReveal 0.2s ease;
+}
+
+.gift-box-inside p {
+  margin: 0 0 10px;
+  color: var(--brown);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.gift-box-inside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gift-box-inside li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--brown-light);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.gift-box-inside li span {
+  color: var(--terracotta);
+  font-size: 11px;
+}
+
+@keyframes giftBoxReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   CHOOSE BUTTON
+========================= */
+
+.gift-box-button {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--olive);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gift-box-button:hover {
+  background: var(--olive-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(76, 89, 66, 0.2);
+}
+
+.gift-box-button span {
+  font-size: 17px;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.gift-boxes-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 54px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  color: var(--brown-light);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.gift-boxes-bottom span {
+  color: var(--terracotta);
+}
+
+.gift-boxes-bottom p {
+  margin: 0;
+}
+
+.gift-boxes-bottom a {
+  color: var(--olive-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.gift-boxes-bottom a:hover {
+  color: var(--terracotta);
+  text-decoration-color: currentColor;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .gift-boxes-section {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .gift-boxes-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+    gap: 22px;
+  }
+
+  .gift-box-content {
+    padding: 22px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .gift-boxes-section {
+    padding: 48px 16px 64px;
+  }
+
+  .gift-boxes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .gift-boxes-header h1 {
+    font-size: clamp(36px, 8vw, 42px);
+  }
+
+  .gift-boxes-intro {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .gift-boxes-categories {
+    gap: 7px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+  }
+
+  .gift-boxes-categories button {
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+
+  .gift-boxes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gift-box-image {
+    height: 260px;
+  }
+
+  .gift-box-content {
+    padding: 21px;
+  }
+
+  .gift-box-description {
+    min-height: auto;
+  }
+
+  .gift-boxes-bottom {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 36px;
+    text-align: center;
+  }
+
+  .gift-box-badge {
+    right: 12px;
+    top: 12px;
+    max-width: 130px;
+    padding: 7px 9px;
+    font-size: 8px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+  .gift-boxes-section {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .gift-boxes-header h1 {
+    font-size: 36px;
+  }
+
+  .gift-box-image {
+    height: 225px;
+  }
+
+  .gift-box-visual {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  .gift-box-content {
+    padding: 18px;
+  }
+
+  .gift-box-content h2 {
+    font-size: 22px;
+  }
+
+  .gift-box-sizes {
+    gap: 5px;
+  }
+
+  .gift-box-badge {
+    right: 10px;
+    top: 10px;
+    max-width: 120px;
+    padding: 6px 8px;
+    font-size: 7px;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .gift-box-card,
+  .gift-box-categories button,
+  .gift-box-sizes button,
+  .gift-box-button,
+  .gift-box-inside-button,
+  .gift-boxes-bottom a {
+    transition: none;
+  }
+
+  .gift-box-card:hover,
+  .gift-box-categories button:hover,
+  .gift-box-sizes button:hover,
+  .gift-box-button:hover {
+    transform: none;
+  }
+
+  .gift-box-inside {
+    animation: none;
+  }
+}
