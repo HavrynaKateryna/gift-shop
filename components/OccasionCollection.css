@@ -1,0 +1,266 @@
+.collection-page {
+  min-height: 100vh;
+  padding-bottom: 80px;
+  color: #51453b;
+  background: #fcfaf6;
+}
+
+.collection-hero {
+  padding: 40px 24px 70px;
+  text-align: center;
+  background: #f7f0e5;
+}
+
+.collection-back {
+  display: inline-block;
+  margin-bottom: 38px;
+  color: #68745b;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.collection-back:hover {
+  color: #b9795f;
+}
+
+.collection-eyebrow {
+  margin: 0 0 16px;
+  color: #68745b;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.collection-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 400;
+}
+
+.collection-intro {
+  max-width: 570px;
+  margin: 20px auto 0;
+  color: #817367;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.collection-content {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.collection-heading {
+  padding: 60px 0 32px;
+  text-align: center;
+}
+
+.collection-heading h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 400;
+}
+
+.collection-heading p {
+  margin: 12px 0 0;
+  color: #817367;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+  gap: 28px;
+}
+
+.digital-product {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8ded0;
+}
+
+.digital-product-art {
+  position: relative;
+  display: grid;
+  min-height: 300px;
+  padding: 24px;
+  place-items: center;
+  background: #f0e4d4;
+}
+
+.digital-product-art--floral,
+.digital-product-art--birthday {
+  background: #f0e4d4;
+}
+
+.digital-product-art--heart,
+.digital-product-art--affirmation {
+  background: #e5e9df;
+}
+
+.digital-product-art--minimal,
+.digital-product-art--journal {
+  background: #f0e9f2;
+}
+
+.digital-product-art--confetti,
+.digital-product-art--sunshine {
+  background: #f3e6ce;
+}
+
+.digital-product-paper {
+  display: flex;
+  width: 78%;
+  min-height: 210px;
+  padding: 24px 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fcfaf6;
+  box-shadow: 0 8px 25px rgb(81 69 59 / 10%);
+}
+
+.digital-product-flower {
+  margin-bottom: 16px;
+  color: #b9795f;
+  font-size: 31px;
+}
+
+.digital-product-label {
+  max-width: 100%;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(16px, 1.7vw, 23px);
+  line-height: 1.4;
+}
+
+.digital-product-brand {
+  margin-top: 22px;
+  color: #817367;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.digital-product-tag {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 7px 10px;
+  color: #4c5942;
+  background: #fcfaf6;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.digital-product-info {
+  padding: 22px;
+}
+
+.digital-product-info h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.digital-product-info > p {
+  min-height: 48px;
+  margin: 10px 0 20px;
+  color: #817367;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.digital-product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #e8ded0;
+}
+
+.digital-product-price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.digital-product-status {
+  color: #817367;
+  font-size: 11px;
+}
+
+.collection-bottom {
+  margin-top: 65px;
+  padding: 35px 20px;
+  text-align: center;
+  background: #f7f0e5;
+}
+
+.collection-bottom p {
+  margin: 0 0 15px;
+  color: #817367;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.collection-bottom a {
+  color: #68745b;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.collection-bottom a:hover {
+  color: #b9795f;
+}
+
+@media (max-width: 850px) {
+  .collection-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+    gap: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .collection-hero {
+    padding: 30px 20px 48px;
+  }
+
+  .collection-back {
+    margin-bottom: 30px;
+  }
+
+  .collection-content {
+    width: calc(100% - 32px);
+  }
+
+  .collection-heading {
+    padding-top: 45px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .digital-product-art {
+    min-height: 280px;
+  }
+
+  .digital-product-paper {
+    width: 70%;
+  }
+
+  .collection-bottom {
+    margin-top: 42px;
+  }
+}
